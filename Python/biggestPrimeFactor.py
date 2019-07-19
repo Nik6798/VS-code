@@ -8,7 +8,7 @@ def maxPrimefactor(num):
     for i in range(3,int(math.sqrt(num)+1),2):
         while num%i==0:
             maxprime=i
-            num/=i
+            num/=i3
     if num>2:
         maxprime=num
     return maxprime
