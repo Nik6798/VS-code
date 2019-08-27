@@ -27,8 +27,8 @@ void _read(T &x){
 }
 int main(){
     fast;
-    int n;
-    _read(n);
-    cout<<n*2 ;
+        int n;
+        _read(n);
+        cout<<n*2 ;
     
 }

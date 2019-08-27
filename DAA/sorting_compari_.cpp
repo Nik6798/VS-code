@@ -1,6 +1,6 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
-int bubbleComp,QuickComp;
+int bubbleComp,QuickComp,Selection_sortComp,InsertionComp;
 //swapping 
 void swap(int *a,int *b){
     int temp=*a;
@@ -75,7 +75,7 @@ int QuickPartition(int arr[],int low,int high){
     return (i+1); 
     
 }
-
+//Quicksort function
 void Quicksort(int arr[],int low,int high){
     if(low<high){
         int pi=QuickPartition(arr,low,high);
@@ -84,6 +84,43 @@ void Quicksort(int arr[],int low,int high){
     }
 }
 
+//Selection sort main logic
+void Selection_sort(int arr[],int n){
+    for (int i = 0; i < n; i++)
+    {
+        int minPos=i;
+        for (int j = i+1; j < n; j++)
+        {
+            if (arr[minPos]>arr[j])
+            {
+                minPos=j;
+               
+            }
+             Selection_sortComp++;
+            
+        }
+        swap(arr[minPos],arr[i]);
+    }
+    
+}
+
+//Insertion Sort main logic
+void Insertion_sort(int arr[],int n){
+    for (int i = 1; i < n; i++)
+    {
+        int key=arr[i];
+        int j=i-1;
+
+             while(j>=0&&arr[j]>key)
+            {
+                arr[j+1]=arr[j];
+                j--;
+                InsertionComp++;
+            }    
+            arr[j+1]=key;    
+    }
+    
+}
 //main function
 int main(){
     int arr1[]={9,9,3,2,6,76,34,23,12,34,453,234,455,34},n1=sizeof(arr1)/4;
@@ -104,5 +141,17 @@ int main(){
     Quicksort(arr3,0,n3-1);
     Print(arr3,n3);
     cout<<"Number of comparision in Quicksort :"<<QuickComp<<endl;
+
+    //Selection sort
+    int arr4[]={9,565,3,2,6,76,98,23,1,67,453,234,455,34},n4=sizeof(arr4)/4;
+    Selection_sort(arr4,n4);
+    Print(arr4,n4);
+    cout<<"Number of comparision in Selection sort :"<<Selection_sortComp<<endl;
+
+    //Insertion sort
+    int arr5[]={9,565,3,2,6,76,98,23,1,67,453,234,455,34},n5=sizeof(arr5)/4;
+    Insertion_sort(arr5,n5);
+    Print(arr5,n5);
+    cout<<"Number of comparision in Insertion sort :"<<InsertionComp<<endl;
 
 }
