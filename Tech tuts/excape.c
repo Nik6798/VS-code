@@ -1,4 +1,4 @@
-int main(){
+main(){
     printf("entering the number 0\a8\a34\a\n");
     printf("hello, NIks\bjar\b\b\b\bn");
     printf("\vnikhil\n");
