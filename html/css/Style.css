@@ -1,0 +1,43 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+.header {
+  color: purple;
+  background: cadetblue;
+}
+
+/* #mar{
+    padding: 10px;
+    background: rebeccapurple;
+} */
+
+button {
+  border: 1px solid transparent;
+  margin-left: 10px;
+  margin-top: 10px;
+  padding: 12px;
+  background: #333333;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: block;
+}
+button:hover {
+  background: transparent;
+  color: #333333;
+  border: 1px solid black;
+  transition: all 1s;
+}
+
+#home:hover {
+  color: rgb(43, 172, 49);
+  background: transparent solid;
+  border: #333333 transparent solid;
+}
+#home {
+  text-decoration: none;
+  color: white;
+}
