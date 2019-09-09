@@ -1,3 +1,4 @@
+//FIXME  not complete yet
 struct bstnode
 {
     int data;
