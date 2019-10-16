@@ -17,15 +17,16 @@ typedef long double ld;
 typedef pair<int, int> pii;
 const int inf = 1e9 + 5;
 const int nax = 1e6 + 5;
-int hurdleRace(int k, vector<int> height) {
-
-
+int hurdleRace(int k, vi height)
+{
+    auto a = max_element(height.begin(), height.end());
+    return *a - k < 0 ? 0 : *a - k;
 }
 
 int main(int argc, char const *argv[])
 {
-    vi height = {2, 5, 4, 5, 2};
-    int a = 7;
-    hurdleRace(a, height);
+    vi height = {1, 6, 3, 5, 2};
+    int a = 4;
+    cout << hurdleRace(a, height);
     return 0;
 }
