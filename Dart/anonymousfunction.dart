@@ -1,7 +1,7 @@
 main(List<String> args) {
-  var li=['apple',34];
+  var li = ['apple', 34];
 
-  li.forEach((item){
+  li.forEach((item) {
     print(item);
   });
 }

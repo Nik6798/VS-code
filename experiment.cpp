@@ -45,12 +45,51 @@ using namespace std;
 //     return 0;
 // }
 
+// int main(int argc, char const *argv[])
+// {
+//     int ar[3] = {};
+//     for (int i : ar)
+//     {
+//         cout << i;
+//     }
+//     return 0;
+// }
+
+//todo this is requied
+
+// int main(int argc, char const *argv[])
+// {
+//     vector<string> str;
+//     stringstream tok(n);
+//     string intermeditate;
+//     while(getline(tok,intermeditate,' ')){
+//         str.push_back(intermeditate);
+//     }
+
+//     for(string a:str){
+//         cout << a << " " << endl;
+//     }
+//     return 0;
+// }
+
+// int main(int argc, char const *argv[])
+// {
+//     string s = "hello";
+//     int a = 13;
+//     s = s + to_string(13);
+//     // cout << s;
+//     s = s + "14";
+//     cout << s;
+// }
+
 int main(int argc, char const *argv[])
 {
-    int ar[3] = {};
-    for (int i : ar)
-    {
-        cout << i;
-    }
+    vector<int> a{1, 3, 5, 345, 45, 334, 3};
+
     return 0;
+}
+
+for (int i = 0; i < count; i++)
+{
+    cout << "nikhil";
 }
