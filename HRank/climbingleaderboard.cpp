@@ -21,25 +21,30 @@ vector<int> climbingLeaderboard(vector<int> scores, vector<int> alice)
 {
     map<int, int> scoreboard;
     int place = 1;
+    int vl = 0;
     vi re;
     for (int i = 0; i < scores.size(); i++)
     {
         if (scores[i] != scores[i + 1])
         {
-            scoreboard[scores[i]] = place;
-            place++;
+            scoreboard[place++] = scores[i];
+            vl = i;
         }
     }
-
     for (int i = 0; i < alice.size(); i++)
     {
-        for (int j = 1; j < scoreboard.size(); j++)
+        for (int j = vl - 1; j >= 1; j--)
         {
-            if (alice[i] >= scoreboard[j])
+            if (alice[i] > scoreboard[j])
+            {
+                re.pb(j);
+            }
+            else if (alice[i] < scoreboard[j])
             {
                 re.pb(j + 1);
-                
+                break;
             }
+
         }
     }
 

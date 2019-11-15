@@ -82,14 +82,31 @@ using namespace std;
 //     cout << s;
 // }
 
-int main(int argc, char const *argv[])
-{
-    vector<int> a{1, 3, 5, 345, 45, 334, 3};
+// int main(int argc, char const *argv[])
+// {
+//     vector<int> a{1, 3, 5, 345, 45, 334, 3};
 
-    return 0;
-}
+//     return 0;
+// }
 
-for (int i = 0; i < count; i++)
-{
-    cout << "nikhil";
-}
+// for (int i = 0; i < count; i++)
+// {
+//     cout << "nikhil";
+// }
+
+// int main(int argc, char const *argv[])
+// {
+//     char str[] = "hello"
+//                  "fuckyou";
+//     cout << str[8];
+//     const char *str1 =R"foo(
+// hello you are nothing hello world
+// fuck you)foo";
+
+//     // above is same as
+//     const char *str2 = "\nhello you are nothing hello world\nfuck you";
+//     cout << str1;
+//     cout << str2;
+//     return 0;
+// }
+
