@@ -19,50 +19,52 @@ const int inf = 1e9 + 5;
 const int nax = 1e6 + 5;
 vector<int> climbingLeaderboard(vector<int> scores, vector<int> alice)
 {
-    map<int, int> scoreboard;
-    int place = 1;
-    int vl = 0;
-    vi re;
-    for (int i = 0; i < scores.size(); i++)
+    //Scores 100, 100, 50, 40, 40, 20, 10
+    //alice 50, 65, 77, 90, 102
+
+    int h_rank = 1;
+    for (int i = scores.size() - 1; i > 0; i--)
     {
-        if (scores[i] != scores[i + 1])
+        if (scores[i] < scores[i - 1])
         {
-            scoreboard[place++] = scores[i];
-            vl = i;
+            h_rank++;
         }
     }
+    h_rank++;
+    vector<int> ranks(alice.size());
+    int j = scores.size() - 1;
     for (int i = 0; i < alice.size(); i++)
     {
-        for (int j = vl - 1; j >= 1; j--)
+        while (alice[i] >= scores[j])
         {
-            if (alice[i] > scoreboard[j])
+            if (h_rank == 1)
             {
-                re.pb(j);
-            }
-            else if (alice[i] < scoreboard[j])
-            {
-                re.pb(j + 1);
                 break;
             }
-
+            if (scores[j] == scores[j - 1])
+            {
+                j--;
+            }
+            else
+            {
+                j--;
+                h_rank--;
+            }
         }
+        ranks[i] = h_rank;
     }
-
-    for (int i : re)
-    {
-        cout << i << " " << endl;
-    }
+    return ranks;
 }
+
 int main(int argc, char const *argv[])
 {
     vi board{100, 100, 50, 40, 40, 20, 10};
     vi score{50, 65, 77, 90, 102};
-    // vi result =
-    climbingLeaderboard(board, score);
-    // for (int i : result)
-    // {
-    //     cout << i << " " << endl;
-    // }
+    vi result = climbingLeaderboard(board, score);
+    for (int i : result)
+    {
+        cout << i << " " << endl;
+    }
 
     return 0;
 }

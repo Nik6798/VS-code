@@ -1,3 +1,4 @@
-for(int i:a){
-    //     cout << i<< endl;
-    // }
+for (int i : result)
+    {
+        cout << i << " " << endl;
+    }
