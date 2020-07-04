@@ -1,2 +1,2 @@
-# VS-code
-Programming stuff
+# code
+Programming related stuff
